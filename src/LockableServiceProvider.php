@@ -2,6 +2,7 @@
 
 namespace AppKit\Lockable;
 
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\ServiceProvider;
 
 class LockableServiceProvider extends ServiceProvider
@@ -55,6 +56,12 @@ class LockableServiceProvider extends ServiceProvider
         // Register the main class to use with the facade
         $this->app->singleton('lockable', function () {
             return new Lockable();
+        });
+
+        Blueprint::macro('lockable', function () {
+            /** @var \Illuminate\Database\Schema\Blueprint $this */
+            $this->integer('locked_by')->nullable();
+            $this->timestamp('locked_until')->nullable();
         });
     }
 }

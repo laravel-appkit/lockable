@@ -3,6 +3,7 @@
 namespace AppKit\Lockable\Tests;
 
 use AppKit\Lockable\Tests\Models\Article;
+
 class ExampleTest extends TestCase
 {
     /** @test */

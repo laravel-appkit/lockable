@@ -1,10 +1,10 @@
 <?php
 
-namespace AppKit\Lockable\Tests;
+namespace AppKit\:package_name_php\Tests;
 
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use AppKit\Lockable\LockableServiceProvider;
-use AppKit\Lockable\Facades\Lockable;
+use AppKit\:package_name_php\:package_name_phpServiceProvider;
+use AppKit\:package_name_php\Facades\:package_name_php;
 
 class TestCase extends OrchestraTestCase
 {
@@ -33,7 +33,7 @@ class TestCase extends OrchestraTestCase
      */
     protected function getPackageProviders($app)
     {
-        return [LockableServiceProvider::class];
+        return [:package_name_phpServiceProvider::class];
     }
 
     /**
@@ -45,7 +45,7 @@ class TestCase extends OrchestraTestCase
     protected function getPackageAliases($app)
     {
         return [
-            'Lockable' => Lockable::class
+            ':package_name_php' => :package_name_php::class
         ];
     }
 

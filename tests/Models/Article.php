@@ -1,14 +1,11 @@
 <?php
 
-namespace AppKit\Lockable\Tests\Models;
+namespace AppKit\:package_name_php\Tests\Models;
 
-use AppKit\Lockable\Traits\Lockable;
 use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-    use Lockable;
-
     /**
      * The attributes that are mass assignable.
      *

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * lockable configuration
+ * :package_name configuration
  */
 return [
 

@@ -59,9 +59,8 @@ class LockableServiceProvider extends ServiceProvider
         });
 
         Blueprint::macro('lockable', function () {
-            /** @var \Illuminate\Database\Schema\Blueprint $this */
+            /** @var Blueprint $this */
             $this->integer('locked_by')->nullable();
-            $this->timestamp('locked_until')->nullable();
         });
     }
 }

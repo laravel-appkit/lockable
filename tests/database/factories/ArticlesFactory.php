@@ -1,7 +1,7 @@
 <?php
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-use AppKit\:package_name_php\Tests\Models\Article;
+use AppKit\Lockable\Tests\Models\Article;
 use Faker\Generator as Faker;
 
 /*

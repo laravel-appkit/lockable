@@ -1,12 +1,12 @@
 {
-    "name": "laravel-appkit/:package_name",
+    "name": "laravel-appkit/lockable",
     "description": "",
     "keywords": [
         "laravel",
         "appkit",
-        ":package_name"
+        "lockable"
     ],
-    "homepage": "https://github.com/laravel-appkit/:package_name",
+    "homepage": "https://github.com/laravel-appkit/lockable",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "AppKit\\:package_name_php\\": "src"
+            "AppKit\\Lockable\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "AppKit\\:package_name_php\\Tests\\": "tests"
+            "AppKit\\Lockable\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -42,10 +42,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "AppKit\\:package_name_php\\:package_name_phpServiceProvider"
+                "AppKit\\Lockable\\LockableServiceProvider"
             ],
             "aliases": {
-                ":package_name_php": "AppKit\\:package_name_php\\Facades\\:package_name_php"
+                "Lockable": "AppKit\\Lockable\\Facades\\Lockable"
             }
         }
     }

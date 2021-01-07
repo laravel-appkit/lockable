@@ -1,0 +1,52 @@
+{
+    "name": "laravel-appkit/:package_name",
+    "description": "",
+    "keywords": [
+        "laravel",
+        "appkit",
+        ":package_name"
+    ],
+    "homepage": "https://github.com/laravel-appkit/:package_name",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Darren Coutts",
+            "email": "d@coutts.io",
+            "role": "Lead Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/support": "^6.0|^7.0|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0|^5.0|^6.0",
+        "phpunit/phpunit": "^8.0",
+        "laravel/legacy-factories": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "AppKit\\:package_name_php\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AppKit\\:package_name_php\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AppKit\\:package_name_php\\:package_name_phpServiceProvider"
+            ],
+            "aliases": {
+                ":package_name_php": "AppKit\\:package_name_php\\Facades\\:package_name_php"
+            }
+        }
+    }
+}

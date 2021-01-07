@@ -1,6 +1,6 @@
 <?php
 
-namespace AppKit\:package_name_php\Tests\Models;
+namespace AppKit\Lockable\Tests\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

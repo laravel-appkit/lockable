@@ -1,8 +1,8 @@
 <?php
 
-namespace AppKit\:package_name_php;
+namespace AppKit\Lockable;
 
-class :package_name_php
+class Lockable
 {
     private $app;
 

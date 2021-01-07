@@ -1,10 +1,10 @@
 <?php
 
-namespace AppKit\:package_name_php;
+namespace AppKit\Lockable;
 
 use Illuminate\Support\ServiceProvider;
 
-class :package_name_phpServiceProvider extends ServiceProvider
+class LockableServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -14,29 +14,29 @@ class :package_name_phpServiceProvider extends ServiceProvider
         /*
          * Optional methods to load your package assets
          */
-        // $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', ':package_name');
-        // $this->loadViewsFrom(__DIR__ . '/../resources/views', ':package_name');
+        // $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'lockable');
+        // $this->loadViewsFrom(__DIR__ . '/../resources/views', 'lockable');
         // $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
-        // $this->loadRoutesFrom(__DIR__ . '/../routes/:package_name.php');
+        // $this->loadRoutesFrom(__DIR__ . '/../routes/lockable.php');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/config.php' => config_path(':package_name.php'),
+                __DIR__ . '/../config/config.php' => config_path('lockable.php'),
             ], 'config');
 
             // Publishing the views.
             /*$this->publishes([
-                __DIR__ . '/../resources/views' => resource_path('views/vendor/:package_name'),
+                __DIR__ . '/../resources/views' => resource_path('views/vendor/lockable'),
             ], 'views');*/
 
             // Publishing assets.
             /*$this->publishes([
-                __DIR__ . '/../resources/assets' => public_path('vendor/:package_name'),
+                __DIR__ . '/../resources/assets' => public_path('vendor/lockable'),
             ], 'assets');*/
 
             // Publishing the translation files.
             /*$this->publishes([
-                __DIR__ . '/../resources/lang' => resource_path('lang/vendor/:package_name'),
+                __DIR__ . '/../resources/lang' => resource_path('lang/vendor/lockable'),
             ], 'lang');*/
 
             // Registering package commands.
@@ -50,11 +50,11 @@ class :package_name_phpServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', ':package_name');
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'lockable');
 
         // Register the main class to use with the facade
-        $this->app->singleton(':package_name', function () {
-            return new :package_name_php();
+        $this->app->singleton('lockable', function () {
+            return new Lockable();
         });
     }
 }
